@@ -56,3 +56,17 @@ function drawLeafPath(context, n, dx, dy, size, length) {
   }
   context.closePath();
 }
+
+function drawPie(context, dx, dy, r, angleStart, angleEnd) {
+  context.beginPath();
+  context.moveTo(dx, dy);
+  context.arc(
+    dx,
+    dy,
+    r,
+    (angleStart * Math.PI) / 180,
+    (angleEnd * Math.PI) / 180,
+    false
+  );
+  context.closePath();
+}
